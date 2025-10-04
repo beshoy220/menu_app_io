@@ -18,21 +18,46 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Menu app for restaurant.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="menu_app">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <!-- <link rel="apple-touch-icon" href="icons/Icon-192.png"> -->
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <!-- <link rel="icon" type="image/png" href="favicon.png"/> -->
 
-  <title>menu_app</title>
+  <title>Menu App</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #000; /* black background */
+      display: flex;
+      justify-content: center;
+      align-items: center; /* center loader */
+    }
+  
+    .loader {
+      width: 15px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      animation: l5 1s infinite linear alternate;
+    }
+  
+    @keyframes l5 {
+      0%   { box-shadow: 20px 0 #fff, -20px 0 #fff2; background: #fff; }
+      33%  { box-shadow: 20px 0 #fff, -20px 0 #fff2; background: #fff2; }
+      66%  { box-shadow: 20px 0 #fff2, -20px 0 #fff; background: #fff2; }
+      100% { box-shadow: 20px 0 #fff2, -20px 0 #fff; background: #fff; }
+    }
+  </style>
 </head>
 <body>
+  <div class="loader"></div>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
